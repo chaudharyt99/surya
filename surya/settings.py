@@ -55,7 +55,7 @@ class Settings(BaseSettings):
 
     # Text detection
     DETECTOR_BATCH_SIZE: Optional[int] = None  # Defaults to 2 for CPU/MPS, 32 otherwise
-    DETECTOR_MODEL_CHECKPOINT: str = "/workspace/text_detection/2025_02_28"
+    DETECTOR_MODEL_CHECKPOINT: str = "/workspace/models/text_detection/2025_02_28"
     DETECTOR_BENCH_DATASET_NAME: str = "vikp/doclaynet_bench"
     DETECTOR_IMAGE_CHUNK_HEIGHT: int = (
         1400  # Height at which to slice images vertically
@@ -78,7 +78,7 @@ class Settings(BaseSettings):
     COMPILE_DETECTOR: bool = False
 
     # Inline math detection
-    INLINE_MATH_MODEL_CHECKPOINT: str = "/workspace/inline_math_detection/2025_02_24"
+    INLINE_MATH_MODEL_CHECKPOINT: str = "/workspace/models/inline_math_detection/2025_02_24"
     INLINE_MATH_THRESHOLD: float = (
         0.9  # Threshold for inline math detection (above this is considered inline-math)
     )
@@ -92,7 +92,7 @@ class Settings(BaseSettings):
     INLINE_MATH_MIN_AREA: int = 100  # Minimum area for inline math detection
 
     # Text recognition
-    RECOGNITION_MODEL_CHECKPOINT: str = "/workspace/text_recognition/2025_02_18"
+    RECOGNITION_MODEL_CHECKPOINT: str = "/workspace/models/text_recognition/2025_02_18"
     RECOGNITION_MAX_TOKENS: int = 175
     RECOGNITION_BATCH_SIZE: Optional[int] = (
         None  # Defaults to 8 for CPU/MPS, 256 otherwise
@@ -112,7 +112,7 @@ class Settings(BaseSettings):
     COMPILE_RECOGNITION: bool = False  # Static cache for torch compile
 
     # Layout
-    LAYOUT_MODEL_CHECKPOINT: str = "/workspace/layout/2025_02_18"
+    LAYOUT_MODEL_CHECKPOINT: str = "/workspace/models/layout/2025_02_18"
     LAYOUT_IMAGE_SIZE: Dict = {"height": 768, "width": 768}
     LAYOUT_SLICE_MIN: Dict = {
         "height": 1500,
@@ -126,7 +126,7 @@ class Settings(BaseSettings):
     ORDER_BENCH_DATASET_NAME: str = "vikp/order_bench"
 
     # Table Rec
-    TABLE_REC_MODEL_CHECKPOINT: str = "/workspace/table_recognition/2025_02_18"
+    TABLE_REC_MODEL_CHECKPOINT: str = "/workspace/models/table_recognition/2025_02_18"
     TABLE_REC_IMAGE_SIZE: Dict = {"height": 768, "width": 768}
     TABLE_REC_MAX_BOXES: int = 150
     TABLE_REC_BATCH_SIZE: Optional[int] = None
@@ -134,7 +134,7 @@ class Settings(BaseSettings):
     COMPILE_TABLE_REC: bool = False
 
     # Texify
-    TEXIFY_MODEL_CHECKPOINT: str = "/workspace/texify/2025_02_18"
+    TEXIFY_MODEL_CHECKPOINT: str = "/workspace/models/texify/2025_02_18"
     TEXIFY_BENCHMARK_DATASET: str = "datalab-to/texify_bench"
     TEXIFY_IMAGE_SIZE: Dict = {"height": 480, "width": 480}
     TEXIFY_MAX_TOKENS: int = 768
@@ -142,7 +142,7 @@ class Settings(BaseSettings):
     COMPILE_TEXIFY: bool = False
 
     # OCR Error Detection
-    OCR_ERROR_MODEL_CHECKPOINT: str = "/workspace/ocr_error_detection/2025_02_18"
+    OCR_ERROR_MODEL_CHECKPOINT: str = "/workspace/models/ocr_error_detection/2025_02_18"
     OCR_ERROR_BATCH_SIZE: Optional[int] = None
     COMPILE_OCR_ERROR: bool = False
 
